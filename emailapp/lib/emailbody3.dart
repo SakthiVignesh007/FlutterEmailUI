@@ -37,7 +37,7 @@ class MyEmailBody3 extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
+            const SelectableText(
               "THANK YOU FOR PLACING YOUR ORDER WITH US.",
               style: TextStyle(
                 color: Colors.black,
@@ -47,7 +47,7 @@ class MyEmailBody3 extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
+            const SelectableText(
               "Your order number: 2343881 has been confirmed.",
               style: TextStyle(
                 color: Colors.black,
@@ -57,7 +57,7 @@ class MyEmailBody3 extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 25),
-            const Text(
+            const SelectableText(
               "NOTE:",
               style: TextStyle(
                 color: Colors.black,
@@ -66,7 +66,7 @@ class MyEmailBody3 extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const Text(
+            const SelectableText(
               "Please be aware that if your address lies within a designated COVID-19 containment and under lockdown zone, Noise will only be able to deliver your order as soon as government regulations allow.",
               style: TextStyle(
                 color: Colors.black,
@@ -82,32 +82,32 @@ class MyEmailBody3 extends StatelessWidget {
               child: const Padding(
                 padding: EdgeInsets.all(12.0),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                  Text(
-                    "REGISTERED ADDRESS:",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 13,
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                  Text(
-                    "Mesh ., MeshMonk Pvt Ltd, 649, 13th Cross, 27th Main, HSR Sector 1, Bangalore 560102, BANGALORE, Karnataka, 560102, India",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 13,
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ]),
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SelectableText(
+                        "REGISTERED ADDRESS:",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 13,
+                          fontFamily: 'Roboto',
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SelectableText(
+                        "Mesh ., MeshMonk Pvt Ltd, 649, 13th Cross, 27th Main, HSR Sector 1, Bangalore 560102, BANGALORE, Karnataka, 560102, India",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 13,
+                          fontFamily: 'Roboto',
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ]),
               ),
             ),
 
             const SizedBox(height: 10),
-            const Text(
+            const SelectableText(
               "Here's your order:",
               style: TextStyle(
                 color: Colors.black,
@@ -125,10 +125,10 @@ class MyEmailBody3 extends StatelessWidget {
             const SizedBox(height: 10),
             buildOrderTable(),
             const SizedBox(height: 10),
-            const Text(
+            const SelectableText(
               "Total: Rs.999.0",
               textAlign: TextAlign.right,
-              style: TextStyle(              
+              style: TextStyle(
                 color: Colors.black,
                 fontSize: 14,
                 fontFamily: 'Roboto',
@@ -146,7 +146,7 @@ class MyEmailBody3 extends StatelessWidget {
               "https://cdn.shopify.com/s/files/1/0997/6284/files/Noise-Smart-Audio-Emailer-Category_2_1.png?v=1617199844",
             ),
             const SizedBox(height: 20),
-            const Text(
+            const SelectableText(
               "We will let you know as soon as your order is shipped. In the meantime, if there’s anything we can help you with, just fill out a form HERE and we’ll get right back to you! We’re available from 9:30AM to 6:00PM from Monday to Saturday.\n\nStay safe and thank you for your patience.",
               style: TextStyle(
                 color: Colors.black,
@@ -156,7 +156,7 @@ class MyEmailBody3 extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            const Text(
+            const SelectableText(
               "Please Note:",
               style: TextStyle(
                 color: Colors.black,
@@ -164,7 +164,7 @@ class MyEmailBody3 extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const Text(
+            const SelectableText(
               "Noise or its employees will never contact you with any special offers including lucky draws, lotteries, or exclusive prizes. Please do not share your personal or bank account details over the phone or via email to stay protected against any kind of fraudulent deals.",
               style: TextStyle(
                 color: Colors.grey,
@@ -184,7 +184,7 @@ class MyEmailBody3 extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
+        SelectableText(
           quantity,
           style: const TextStyle(
             color: Colors.black,
@@ -195,7 +195,7 @@ class MyEmailBody3 extends StatelessWidget {
           ),
         ),
         Expanded(
-          child: Text(
+          child: SelectableText(
             name,
             style: const TextStyle(
               color: Colors.black,
@@ -205,7 +205,7 @@ class MyEmailBody3 extends StatelessWidget {
             ),
           ),
         ),
-        Text(
+        SelectableText(
           price,
           style: const TextStyle(
             color: Colors.black,
@@ -231,32 +231,33 @@ class MyEmailBody3 extends StatelessWidget {
     );
   }
 
-  Widget buildOrderTable(){
+  Widget buildOrderTable() {
     return Center(
-          child: DataTable(
-            border: TableBorder.all(color: Color(0XFFF5F5F5)),
-            columns: const [
-              DataColumn(label: Text('Item')),
-              DataColumn(label: Text('Name')),
-              DataColumn(label: Text('Quantity')),
-              DataColumn(label: Text('Price')),
-            ],
-            rows: const [
-              DataRow(cells: [
-                DataCell(Text('1')),
-                DataCell(Text('Noise Nerve Neckband Earphones with Mic - Cobalt Blue')),
-                DataCell(Text('1')),
-                DataCell(Text('Rs. 999.0')),
-              ]),
-            ],
-          ),
-        );
+      child: DataTable(
+        border: TableBorder.all(color: Color(0XFFF5F5F5)),
+        columns: const [
+          DataColumn(label: SelectableText('Item')),
+          DataColumn(label: SelectableText('Name')),
+          DataColumn(label: SelectableText('Quantity')),
+          DataColumn(label: SelectableText('Price')),
+        ],
+        rows: const [
+          DataRow(cells: [
+            DataCell(SelectableText('1')),
+            DataCell(SelectableText(
+                'Noise Nerve Neckband Earphones with Mic - Cobalt Blue')),
+            DataCell(SelectableText('1')),
+            DataCell(SelectableText('Rs. 999.0')),
+          ]),
+        ],
+      ),
+    );
   }
 
   Widget buildSocialMediaIcons() {
     return Column(
       children: [
-        const Text(
+        const SelectableText(
           "CONNECT WITH US",
           style: TextStyle(
             color: Colors.black,

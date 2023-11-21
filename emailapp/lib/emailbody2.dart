@@ -9,7 +9,9 @@ class MyEmailBody2 extends StatelessWidget {
       children: [
         Container(
           margin: EdgeInsets.only(bottom: 40),
-          width: MediaQuery.of(context).size.width >= 500? 500: MediaQuery.of(context).size.width - 20,
+          width: MediaQuery.of(context).size.width >= 500
+              ? 500
+              : MediaQuery.of(context).size.width - 20,
           decoration:
               BoxDecoration(border: Border.all(color: Colors.grey, width: .5)),
           child: Column(
@@ -28,7 +30,7 @@ class MyEmailBody2 extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
+                      const SelectableText(
                         "Order Shipped",
                         style: TextStyle(
                             color: Color(0xFFED54A4),
@@ -38,23 +40,24 @@ class MyEmailBody2 extends StatelessWidget {
                       const SizedBox(
                         height: 16,
                       ),
-                      const Text("Dear PremierMonk,"),
+                      const SelectableText("Dear PremierMonk,"),
                       const SizedBox(
                         height: 16,
                       ),
-                      const Text(
+                      const SelectableText(
                         "We are pleased to inform you that your Hopscotch order is on its way! We have packed it with care & couriered it.",
                         style: TextStyle(),
                       ),
                       const SizedBox(
                         height: 16,
                       ),
-                      const Text(
+                      const SelectableText(
                           "Request you to pay ₹169 to the courier associate visiting you."),
                       const SizedBox(
                         height: 16,
                       ),
-                      const Text("We look forward to seeing you again."),
+                      const SelectableText(
+                          "We look forward to seeing you again."),
                       const SizedBox(
                         height: 16,
                       ),
@@ -84,11 +87,11 @@ class MyEmailBody2 extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text("SubTotal"),
+                      SelectableText("SubTotal"),
                       SizedBox(
                         width: 32,
                       ),
-                      Text("₹69.0")
+                      SelectableText("₹69.0")
                     ],
                   ),
                 ),
@@ -103,11 +106,11 @@ class MyEmailBody2 extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text("Shipping"),
+                      SelectableText("Shipping"),
                       SizedBox(
                         width: 32,
                       ),
-                      Text("₹100.0")
+                      SelectableText("₹100.0")
                     ],
                   ),
                 ),
@@ -118,11 +121,11 @@ class MyEmailBody2 extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text("Order Total"),
+                      SelectableText("Order Total"),
                       SizedBox(
                         width: 32,
                       ),
-                      Text("₹169.0")
+                      SelectableText("₹169.0")
                     ],
                   ),
                 ),
@@ -158,15 +161,15 @@ class MyEmailBody2 extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
+                      const SelectableText(
                         "SHIPMENT DETAILS",
                         style: TextStyle(color: Colors.blueGrey),
                       ),
                       const SizedBox(
                         height: 8,
                       ),
-                      const Text("Tracking ID: SF321527154HO"),
-                      const Text("Sent through: Shadowfax"),
+                      const SelectableText("Tracking ID: SF321527154HO"),
+                      const SelectableText("Sent through: Shadowfax"),
                       const SizedBox(
                         height: 8,
                       ),
@@ -189,14 +192,14 @@ class MyEmailBody2 extends StatelessWidget {
                                 "https://hopscotch.clickpost.in/?cp_id=9&waybill=SF321527154HO"
                                     as Uri);
                           },
-                          child: const Text(
+                          child: const SelectableText(
                             "TRACK SHIPMENT",
                             style: TextStyle(color: Colors.white),
                           )),
                       const SizedBox(
                         height: 12,
                       ),
-                      const Text(
+                      const SelectableText(
                         "*Please note that tracking ID may take up to 24 hours to get activated.",
                         style: TextStyle(fontSize: 12),
                       )
@@ -213,18 +216,18 @@ class MyEmailBody2 extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      SelectableText(
                         "SHIPPED TO",
                         style: TextStyle(color: Colors.blueGrey),
                       ),
                       const SizedBox(
                         height: 12,
                       ),
-                      Text(
+                      SelectableText(
                         "PremierMonk PremierMonk Pvt Ltd, 649, 13th Cross, 27th Main, mrk Sector 1, Bangalore 560102 Bangalore, Karnataka 560102.",
                         style: TextStyle(wordSpacing: 3),
                       ),
-                      Text("9886158353")
+                      SelectableText("9886158353")
                     ],
                   ),
                 ),
@@ -250,17 +253,17 @@ class MyEmailBody2 extends StatelessWidget {
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              SelectableText(
                 "Cutest Princess Pink Glitter Slippers On Alligator Clip",
                 style: TextStyle(fontSize: 12),
               ),
-              Text(
+              SelectableText(
                 "Qty: 1",
                 style: TextStyle(fontSize: 12),
               )
             ],
           )),
-          const Text("₹69.00")
+          const SelectableText("₹69.00")
         ],
       ),
     );

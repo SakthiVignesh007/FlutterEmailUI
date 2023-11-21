@@ -5,9 +5,11 @@ import 'package:flutter/material.dart';
 class MyEmailBody1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-      return Center(
-        child: Container(
-          width: MediaQuery.of(context).size.width >= 500? 500: MediaQuery.of(context).size.width - 20,
+    return Center(
+      child: Container(
+        width: MediaQuery.of(context).size.width >= 500
+            ? 500
+            : MediaQuery.of(context).size.width - 20,
         padding: const EdgeInsets.all(20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -15,17 +17,22 @@ class MyEmailBody1 extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Image.network("https://cdn.shopify.com/s/files/1/0569/6867/5527/files/finalised_logo_-_cropped.jpg?14393",
-                height: 70,),
-                Text("ORDER #226324", style: TextStyle(color: Colors.grey),)
+                Image.network(
+                  "https://cdn.shopify.com/s/files/1/0569/6867/5527/files/finalised_logo_-_cropped.jpg?14393",
+                  height: 70,
+                ),
+                SelectableText(
+                  "ORDER #226324",
+                  style: TextStyle(color: Colors.grey),
+                )
               ],
             ),
-            const Text(
+            const SelectableText(
               "Thank you for your purchase!",
               style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10.0),
-            const Text(
+            const SelectableText(
               "Hi Sparks, we're getting your order ready to be shipped. We will notify you when it has been sent.",
               style: TextStyle(fontSize: 16.0, color: Colors.grey),
             ),
@@ -35,9 +42,8 @@ class MyEmailBody1 extends StatelessWidget {
             buildOrderSummary(),
           ],
         ),
-          ),
-      );
- 
+      ),
+    );
   }
 
   Widget buildAttachment() {
@@ -56,7 +62,7 @@ class MyEmailBody1 extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          const SelectableText(
             "Order Summary",
             style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
           ),
@@ -76,9 +82,10 @@ class MyEmailBody1 extends StatelessWidget {
         width: 60,
         height: 60,
       ),
-      title: const Text("Happilo 100% Natural Premium California Almonds"),
-      subtitle: const Text("200g"),
-      trailing: const Text("₹275.00"),
+      title: const SelectableText(
+          "Happilo 100% Natural Premium California Almonds"),
+      subtitle: const SelectableText("200g"),
+      trailing: const SelectableText("₹275.00"),
     );
   }
 
@@ -86,29 +93,29 @@ class MyEmailBody1 extends StatelessWidget {
     return const Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        Text(
+        SelectableText(
           "Discount: -₹18.75",
           style: TextStyle(fontSize: 16.0, color: Colors.grey),
         ),
-        Text(
+        SelectableText(
           "Subtotal: ₹256.25",
           style: TextStyle(fontSize: 16.0, color: Colors.grey),
         ),
-        Text(
+        SelectableText(
           "Shipping: ₹100.00",
           style: TextStyle(fontSize: 16.0, color: Colors.grey),
         ),
-        Text(
+        SelectableText(
           "Taxes: ₹0.00",
           style: TextStyle(fontSize: 16.0, color: Colors.grey),
         ),
         Divider(),
-        Text(
+        SelectableText(
           "Total: ₹356.25",
           style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 10.0),
-        Text(
+        SelectableText(
           "You saved ₹18.75",
           style: TextStyle(fontSize: 16.0, color: Colors.grey),
         ),

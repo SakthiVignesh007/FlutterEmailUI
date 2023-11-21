@@ -18,8 +18,8 @@ class HomePage extends StatelessWidget {
                       builder: (context) =>
                           EmailPage(emailBody: MyEmailBody1())));
             },
-            child: Text("Go to Mail 1")),
-            TextButton(
+            child: SelectableText("Go to Mail 1")),
+        TextButton(
             onPressed: () {
               Navigator.push(
                   context,
@@ -27,8 +27,8 @@ class HomePage extends StatelessWidget {
                       builder: (context) =>
                           EmailPage(emailBody: MyEmailBody2())));
             },
-            child: Text("Go to Mail 2")),
-            TextButton(
+            child: SelectableText("Go to Mail 2")),
+        TextButton(
             onPressed: () {
               Navigator.push(
                   context,
@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
                       builder: (context) =>
                           EmailPage(emailBody: MyEmailBody3())));
             },
-            child: Text("Go to Mail 3"))
+            child: SelectableText("Go to Mail 3"))
       ],
     ));
   }
